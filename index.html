@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Lucas Resende | Portfólio</title>
+  </head>
+  <body>
+    <div class="fundo-animado"></div>
+    <nav class="navegacao">
+      <ul class="menu">
+        <li><a href="#inicio" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre Mim</a></li>
+        <li><a href="#projetos" class="menu-link">Projetos</a></li>
+        <li><a href="#contato" class="menu-link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main id="inicio" class="cabeçalho">
+      <div class="apresentação">
+        <img
+          src="img/Linkedin e Portfólio.png"
+          alt="Foto de Lucas Resende"
+          class="foto-perfil"
+        />
+        <h1>Lucas Resende</h1>
+        <p class="cabeçalho-sub-título">Desenvolvedor Backend</p>
+      </div>
+    </main>
+
+    <section id="sobre" class="projetos">
+      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+          Sempre em busca de aprender mais sobre a área, principalmente na área
+          de desenvolvedor. Trabalhei em projetos pessoais e em conjunto com
+          outras pessoas, e atualmente estou aprendendo e trabalhando muito com
+          IA, meu último projeto eu fiz o treinamento de modelos diferentes.
+          Atualmente estou a procura de trabalho na área de desenvolvedor ou
+          analista de sistema. Uso diversas tecnologias, mas meu forte é Python
+          e Java, tenho experiência em integrar modelos de IA em sistemas
+          back-end para otimizar processos e criar soluções inteligentes.
+          Concluí recentemente a faculdade de Bacharelado de Ciências da
+          Computação.
+        </p>
+      </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+      <h2 class="projetos-titulo">Projetos</h2>
+      <div class="projetos-lista">
+        <div class="projeto-item">
+          <img
+            src="img/Loja de carros.jpg"
+            alt="Loja de carros"
+            class="projeto-imagem"
+          />
+          <div class="caixa-texto-projeto">
+            <h3 class="projeto-nome">Loja de carros</h3>
+            <p class="projeto-descricao">
+              Loja virtual e moderna para vendas de carros.
+            </p>
+          </div>
+        </div>
+        <div class="projeto-item">
+          <img
+            src="img/projeto3.png"
+            alt="Página de Viagens"
+            class="projeto-imagem"
+          />
+          <div class="caixa-texto-projeto">
+            <h3 class="projeto-nome">Página de Viagens</h3>
+            <p class="projeto-descricao">
+              Página de viagens interativa com roteiros de viagens mais
+              cobiçados no mundo.
+            </p>
+          </div>
+        </div>
+        <div class="projeto-item">
+          <img
+            src="img/Página microsoft.png"
+            alt="Página da microsoft"
+            class="projeto-imagem"
+          />
+          <div class="caixa-texto-projeto">
+            <h3 class="projeto-nome">Página da Microsoft</h3>
+            <p class="projeto-descricao">
+              Página de apresentação da Microsoft com informações sobre produtos
+              e serviços.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="projetos">
+      <h2 class="contato-titulo">Entre em Contato</h2>
+      <form
+        class="formulario-contato"
+        id="formulario"
+        onsubmit="enviarWhats(event)"
+      >
+        <div class="nome-form">
+          <input placeholder="Nome" class="text-form" id="nome" />
+        </div>
+        <div class="nome-form">
+          <textarea
+            class="text-form"
+            placeholder="Digite sua mensagem"
+            rows="4"
+            id="mensagem"
+          ></textarea>
+        </div>
+        <button type="submit" class="botao-form">Enviar Whatsapp</button>
+      </form>
+    </section>
+
+    <script>
+      function enviarWhats(event) {
+        event.preventDefault();
+        const nome = document.getElementById("nome");
+        const mensagem = document.getElementById("mensagem");
+        const telefone = "5579999423247";
+
+        const texto = `Olá, meu nome é ${nome.value}. ${mensagem.value}`;
+        const msgFormatada = encodeURIComponent(texto);
+
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>
