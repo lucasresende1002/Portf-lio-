@@ -159,9 +159,20 @@ h1{
 .projeto-nome{
     margin-bottom: 5px;
 }
-.projeto-descrição{
+.projeto-descricao{
     color: rgba(226, 236, 240, 0.8);
     line-height: 1.25rem;
+}
+
+/* Garantir que os links dos cards mantenham a cor do texto (branco) */
+.projeto-link,
+.projeto-link:link,
+.projeto-link:visited,
+.projeto-link:hover,
+.projeto-link:active{
+    color: inherit;
+    text-decoration: none;
+    display: block;
 }
 
 
